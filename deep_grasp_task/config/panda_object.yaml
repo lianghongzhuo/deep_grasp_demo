@@ -2,29 +2,29 @@
 max_solutions: 10
 
 # Planning group and link names
-arm_group_name: "panda_arm"
-eef_name: "hand"
-hand_group_name: "hand"
-hand_frame: "panda_link8"
+arm_group_name: "arm"
+eef_name: "gripper"
+hand_group_name: "gripper"
+hand_frame: "s_model_tool0"
 
 # Poses
 hand_open_pose: "open"
-hand_close_pose: "close"
-arm_home_pose: "ready"
+hand_close_pose: "closed"
+arm_home_pose: "home"
 
 # Scene frames
 world_frame: "world"
 table_reference_frame: "world"
 object_reference_frame: "world"
 camera_reference_frame: "world"
-surface_link: "table"
+surface_link: "table_top"
 
 # Collision object for picking
 # CYLINDER object specifications
 spawn_mesh: false
 object_name: "object"
-object_dimensions: [0.25, 0.02] # [height, radius]
-object_pose: [0.5, -0.25, 0.0, 0, 0, 0]
+object_dimensions: [0.1, 0.02] # [height, radius]
+object_pose: [0.1, -0.25, 0.0, 0, 0, 0]
 
 # # BAR CLAMP
 # spawn_mesh: true
@@ -50,11 +50,11 @@ camera_pose: [0.5, 0, 0.7, 0, 0, 0] # side
 # Table model
 spawn_table: true
 table_name: "table"
-table_dimensions: [0.4, 0.5, 0.1]  # [length, width, height]
-table_pose: [0.5, -0.25, 0, 0, 0, 0]
+table_dimensions: [1.00, 0.8, 0.78]  # [length, width, height]
+table_pose: [0.89, 0.74, 0, 0, 0, 0]
 
 # Gripper grasp frame transform [x,y,z,r,p,y]
-grasp_frame_transform: [0, 0, 0.1, 1.571, 0.785, 1.571]
+grasp_frame_transform: [0, 0, 0.1, 0, 0.0, 0.0]
 
 # Place pose [x,y,z,r,p,y]
 # place_pose: [0.5, 0.3, 0, 0, 0, 0]
