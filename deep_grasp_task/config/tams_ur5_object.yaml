@@ -14,17 +14,17 @@ arm_home_pose: "home"
 
 # Scene frames
 world_frame: "world"
-table_reference_frame: "world"
-object_reference_frame: "world"
-camera_reference_frame: "world"
+table_reference_frame: "floor"
+object_reference_frame: "table_top"
+camera_reference_frame: "table_top"
 surface_link: "table_top"
 
 # Collision object for picking
 # CYLINDER object specifications
 spawn_mesh: false
 object_name: "object"
-object_dimensions: [0.1, 0.02] # [height, radius]
-object_pose: [0.1, -0.25, 0.0, 0, 0, 0]
+object_dimensions: [0.01, 0.01] # [height, radius]
+object_pose: [0.1, -0.25, 0.1, 0, 0, 0]
 
 # # BAR CLAMP
 # spawn_mesh: true
@@ -41,24 +41,24 @@ object_pose: [0.1, -0.25, 0.0, 0, 0, 0]
 # object_pose: [0.5, 0, 0., 0, 0, 0]
 
 # Camera collision object
-spawn_camera: false
+spawn_camera: true
 camera_name: "camera"
 camera_mesh_file: "package://deep_grasp_task/meshes/camera/kinect.dae"
-camera_pose: [0.5, 0, 0.7, 0, 0, 0] # side
-# camera_pose: [0.5, 0, 0.7, 0, 1.571, 1.571] # over head
+camera_pose: [0.9954000073063723, -0.12168143841203671, 0.6534364824824772, -3.0883575313113507, -1.490268101490763, -1.1503662157299182] #
 
 # Table model
 spawn_table: true
-table_name: "table"
-table_dimensions: [1.00, 0.8, 0.78]  # [length, width, height]
-table_pose: [0.89, 0.74, 0, 0, 0, 0]
+table_name: "table_action"
+table_dimensions: [0.01, 0.01, 0.01]  # [length, width, height]
+table_pose: [10.89, 10.74, 10, 0, 0, 0]
+#table_dimensions: [0.8, 1.0, 0.78]  # [length, width, height]
+#table_pose: [0.89, 0.74, 0, 0, 0, 0]
 
 # Gripper grasp frame transform [x,y,z,r,p,y]
-grasp_frame_transform: [0, 0, 0.1, 0, 0.0, 0.0]
+grasp_frame_transform: [0, 0, 0.0, 0.0, 0.0, 0.0]
 
 # Place pose [x,y,z,r,p,y]
-# place_pose: [0.5, 0.3, 0, 0, 0, 0]
-place_pose: [0.6, -0.15, 0, 0, 0, 0]
+place_pose: [0.0, 0.0, 0.2, 0, 0, 0]
 place_surface_offset: 0.0001 # place offset from table
 
 # Valid distance range when approaching an object for picking

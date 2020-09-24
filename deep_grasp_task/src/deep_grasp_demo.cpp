@@ -79,7 +79,7 @@ moveit_msgs::CollisionObject createTable()
   object.primitives.resize(1);
   object.primitives[0].type = shape_msgs::SolidPrimitive::BOX;
   object.primitives[0].dimensions = table_dimensions;
-  pose.position.z -= 0.5 * table_dimensions[2];  // align surface with world
+  pose.position.z = 0.5 * table_dimensions[2];  // align surface with world
   object.primitive_poses.push_back(pose);
   object.operation = moveit_msgs::CollisionObject::ADD;
 
