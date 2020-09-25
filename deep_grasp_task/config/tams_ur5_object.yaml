@@ -8,8 +8,8 @@ hand_group_name: "gripper"
 hand_frame: "s_model_tool0"
 
 # Poses
-hand_open_pose: "open"
-hand_close_pose: "closed"
+hand_open_pose: "pinch_open"
+hand_close_pose: "pinch_closed"
 arm_home_pose: "home"
 
 # Scene frames
