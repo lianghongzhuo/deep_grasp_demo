@@ -44,7 +44,7 @@ object_pose: [0.1, -0.25, 0.1, 0, 0, 0]
 spawn_camera: true
 camera_name: "camera"
 camera_mesh_file: "package://deep_grasp_task/meshes/camera/kinect.dae"
-camera_pose: [0.9954000073063723, -0.12168143841203671, 0.6534364824824772, -3.0883575313113507, -1.490268101490763, -1.1503662157299182] #
+camera_pose: [0.9954000073063723, -0.12168143841203671, 0.6534364824824772, -3.0883575313113507, -1.1503662157299182, -1.490268101490763] #
 
 # Table model
 spawn_table: true
@@ -60,6 +60,11 @@ grasp_frame_transform: [0, 0, 0.0, 0.0, 0.0, 0.0]
 # Place pose [x,y,z,r,p,y]
 place_pose: [0.0, 0.0, 0.2, 0, 0, 0]
 place_surface_offset: 0.0001 # place offset from table
+
+# Approach vector in the hand frame
+approach_vector_x: 1.0
+approach_vector_y: 0.0
+approach_vector_z: 0.0
 
 # Valid distance range when approaching an object for picking
 approach_object_min_dist: 0.1
