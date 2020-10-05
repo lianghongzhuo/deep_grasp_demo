@@ -23,7 +23,7 @@ surface_link: "table_top"
 # CYLINDER object specifications
 spawn_mesh: false
 object_name: "object"
-object_dimensions: [0.01, 0.01] # [height, radius]
+object_dimensions: [0.001, 0.001] # [height, radius]
 object_pose: [0.1, -0.25, 0.1, 0, 0, 0]
 
 # # BAR CLAMP
@@ -41,15 +41,15 @@ object_pose: [0.1, -0.25, 0.1, 0, 0, 0]
 # object_pose: [0.5, 0, 0., 0, 0, 0]
 
 # Camera collision object
-spawn_camera: true
+spawn_camera: false
 camera_name: "camera"
 camera_mesh_file: "package://deep_grasp_task/meshes/camera/kinect.dae"
-camera_pose: [0.9954000073063723, -0.12168143841203671, 0.6534364824824772, -3.0883575313113507, -1.1503662157299182, -1.490268101490763] #
+camera_pose: [0.1, -0.12168, 0.653436, -3.088, -1.150, -1.49] #
 
 # Table model
-spawn_table: true
+spawn_table: false
 table_name: "table_action"
-table_dimensions: [0.01, 0.01, 0.01]  # [length, width, height]
+table_dimensions: [0.001, 0.001, 0.001]  # [length, width, height]
 table_pose: [10.89, 10.74, 10, 0, 0, 0]
 #table_dimensions: [0.8, 1.0, 0.78]  # [length, width, height]
 #table_pose: [0.89, 0.74, 0, 0, 0, 0]
