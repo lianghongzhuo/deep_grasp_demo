@@ -6,29 +6,30 @@ add_compile_options(-std=c++14)
 
 # Warnings
 add_definitions(-W -Wall -Wextra
-  -Wwrite-strings -Wunreachable-code -Wpointer-arith
-  -Winit-self -Wredundant-decls
-  -Wno-unused-parameter -Wno-unused-function)
+                -Wwrite-strings -Wunreachable-code -Wpointer-arith
+                -Winit-self -Wredundant-decls
+                -Wno-unused-parameter -Wno-unused-function)
 
 # Find catkin macros and libraries
 find_package(catkin REQUIRED COMPONENTS
-	actionlib
-	moveit_core
-	moveit_ros_planning_interface
-	moveit_task_constructor_core
-	moveit_task_constructor_msgs
-  roscpp
-	rosparam_shortcuts
+    actionlib
+    moveit_core
+    moveit_ros_planning_interface
+    moveit_task_constructor_core
+    moveit_task_constructor_msgs
+    roscpp
+    rosparam_shortcuts
+    rviz_marker_tools
 )
 
 ###################################
 ## Catkin specific configuration ##
 ###################################
 catkin_package(
- INCLUDE_DIRS include
- CATKIN_DEPENDS
-	moveit_task_constructor_msgs
- 	roscpp
+    INCLUDE_DIRS include
+    CATKIN_DEPENDS
+    moveit_task_constructor_msgs
+    roscpp
 )
 
 ###########
@@ -38,14 +39,14 @@ catkin_package(
 # Specify additional locations of header files
 # Your package locations should be listed before other locations
 include_directories(
-  include
-  ${catkin_INCLUDE_DIRS}
+    include
+    ${catkin_INCLUDE_DIRS}
 )
 
 # Declare a C++ executable
 add_executable(deep_grasp_demo
- 							 src/deep_grasp_demo.cpp
-							 src/deep_pick_place_task.cpp
+               src/deep_grasp_demo.cpp
+               src/deep_pick_place_task.cpp
 )
 
 # Specify libraries to link a library or executable target against
@@ -59,21 +60,21 @@ target_link_libraries(deep_grasp_demo
 
 # Mark executables and/or libraries for installation
 install(
-  TARGETS
+    TARGETS
     deep_grasp_demo
-  ARCHIVE DESTINATION
+    ARCHIVE DESTINATION
     ${CATKIN_PACKAGE_LIB_DESTINATION}
-  LIBRARY DESTINATION
+    LIBRARY DESTINATION
     ${CATKIN_PACKAGE_LIB_DESTINATION}
-  RUNTIME DESTINATION
+    RUNTIME DESTINATION
     ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 
 # Mark cpp header files for installation
 install(
-  DIRECTORY
+    DIRECTORY
     include/${PROJECT_NAME}/
-  DESTINATION
+    DESTINATION
     ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
 )
 

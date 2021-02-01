@@ -2,7 +2,7 @@
 <package format="2">
   <name>deep_grasp_task</name>
   <version>0.0.1</version>
-  <description>Constucts a pick place task using deep learning for grasp synthesis</description>
+  <description>Constructs a pick place task using deep learning for grasp synthesis</description>
 
   <maintainer email="boston@picknik.ai">Boston Cleek</maintainer>
   <author email="boston@picknik.ai">Boston Cleek</author>
@@ -17,4 +17,5 @@
   <depend>moveit_core</depend>
   <depend>roscpp</depend>
   <depend>rosparam_shortcuts</depend>
+  <depend>rviz_marker_tools</depend>
 </package>
